@@ -1,0 +1,26 @@
+1、mkdir cli-practice
+2、touch cli-practice/readme.md
+3、echo "Hi there,this is a readme file" >> cli-practice/readme.md 
+     or
+     echo "Hi there,this is a readme file" > cli-practice/readme.md 
+4、echo "This is the second line of the readme file" >> cli-practice/readme.md
+     or
+     cat >> cli-practice/readme.md
+     This is the second line of the readme file
+     ctrl+c
+     or
+     cat >> cli-practice/readme.md <<EOF
+     This is the second line of the readme file
+     EOF
+5、mv cli-practice/readme.md cli-practice/readme.txt
+6、mkdir cli-practice/document
+7、mv cli-practice/readme.txt cli-practice/document/introduction.txt
+8、cp cli-practice/document/introduction.txt cli-practice/document/readme.txt
+9、echo "The quick brown fox jumps over a lazy dog" > cli-practice/document/readme.txt
+10、mkdir cli-practice/docs
+       cp -i cli-practice/document/* cli-practice/docs
+11、rm -ir cli-practice/document
+12、mkdir cli-practice/parent
+       mkdir cli-practice/parent/child
+       mkdir cli-practice/parent/child/docs
+13、cp cli-practice/docs/introduction.txt cli-practice/parent/child/docs
